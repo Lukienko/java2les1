@@ -1,20 +1,30 @@
 
 public class Team {
+    private String name;
+    private Competitor[] competitors;
+    private StringBuilder results;
 
-    String teamName;
-    Athlete[] team;
-
-
-    public Team(Athlete[] team, String teamName) {
-        this.teamName = teamName;
-        this.team = team;
+    public Team(String name, Competitor... competitors) {
+        this.name = name;
+        this.competitors = competitors;
+        this.results = new StringBuilder();
     }
 
-    public String getTeamName() {
-        return teamName;
+    public void setResult(String result) {
+        results.append(result).append("\n");
     }
 
-    public Athlete[] getTeam() {
-        return team;
+    public String getName() {
+        return name;
+    }
+
+    public Competitor[] getCompetitors() {
+        return competitors;
+    }
+
+    public void showResults() {
+        System.out.println("Результаты команды: " + name);
+        System.out.println("------------------------");
+        System.out.print(results);
     }
 }

@@ -1,5 +1,5 @@
 public class Athlete {
-    String name;
+    private String name;
     int age;
     double averageSpeed;
 
